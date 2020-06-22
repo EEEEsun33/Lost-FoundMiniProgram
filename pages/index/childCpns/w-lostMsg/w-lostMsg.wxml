@@ -1,0 +1,13 @@
+<!--pages/index/childCpns/w-lostMsg/w-lostMsg.wxml-->
+<view class="titleNum">
+  <text class="lostTitle">失物信息</text><text class="lostNum">当前有{{ lostnum }}人丢失物品</text>
+</view>
+<view class="lostMsg">
+  <block wx:for="{{lostMsgs}}" wx:key="index">
+    <view class="lostMsg-item" catchtap="enterDetails" data-goodsid="{{item.id}}">
+      <image src="{{item.image}}" />
+      <view class="lostMsgtitle">{{item.name}}</view>
+      <view class="lostMsgdate">{{item.date}}</view>
+    </view>
+  </block>
+</view>

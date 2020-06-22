@@ -1,0 +1,44 @@
+/* pages/details/details.wxss */
+.lostDetail {
+ padding: 10px;
+}
+
+.imagesize{
+ display:flex;        
+ justify-content: center;  
+ padding-bottom: 10px;        
+}
+.imagesize image { 
+  width:400rpx;
+  height:400rpx;
+  }
+.msgRow {
+  display: flex;
+}
+.text {
+  text-align-last: justify;
+  flex:1;
+}
+.isMinebtn {
+  margin-top:20px;
+  background-color: #ff5777;
+  color: white;
+}
+.tr {
+ display: flex;
+ width: 100%;
+ justify-content: center;
+ height: 3rem;
+ align-items: center;
+}
+.td {
+ width:40%;
+ justify-content: center;
+ text-align: center;
+}
+.bg-w{
+ background: snow;
+}
+.bg-g{
+ background: #E6F3F9;
+}

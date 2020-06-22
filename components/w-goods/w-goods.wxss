@@ -1,0 +1,41 @@
+/* components/w-goods/w-goods.wxss */
+.foundMsg-item .foundMsgtitle {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.foundMsgdate {
+  font-size: 20rpx;
+  color: gray;
+}
+ 
+ .titleNum {
+   padding: 20rpx;
+ }
+
+ .foundTitle {
+   font-weight: bold;
+ }
+
+ .foundNum {
+   float: right;
+   font-size: 12px;
+   color: gray;
+ }
+
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 8rpx;
+}
+
+.goods > .goods-item {
+  position: relative;
+}
+
+.goods > .goods-item {
+  width: 48%;
+  margin-top: 20rpx;
+}
+

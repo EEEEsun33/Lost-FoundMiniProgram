@@ -1,0 +1,41 @@
+/* pages/index/childCpns/w-lostMsg/w-lostMsg.wxss */
+.lostMsg {
+  display: flex;
+  margin-top: 20rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 16rpx solid #eee; 
+}
+
+.lostMsg-item {
+  flex: 1;
+  text-align: center;
+}
+
+.lostMsg-item image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.lostMsg-item .lostMsgtitle {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.lostMsgdate {
+  font-size: 20rpx;
+  color: gray;
+}
+ 
+ .titleNum {
+   padding: 20rpx;
+ }
+
+ .lostTitle {
+   font-weight: bold;
+ }
+
+ .lostNum {
+   float: right;
+   font-size: 12px;
+   color: gray;
+ }

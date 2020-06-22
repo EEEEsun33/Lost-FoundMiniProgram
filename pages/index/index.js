@@ -2,53 +2,89 @@
 //获取应用实例
 const app = getApp()
 
+
+// 导入封装网络请求函数
+// import request from '../../service/network.js'
+import { getMultiData } from '../../service/index.js'
+import { getGoodsData } from '../../service/index.js'
+
+var lostMsg = require('../../assets/data/lostMsg.js');  //引入
+var foundMsg = require('../../assets/data/foundMsg.js');  //引入
+var banner = require('../../assets/data/banner.js');  //引入
+
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    foundMsgs: {},
+    // 3. 定义接收轮播图数据的变量 
+    banners: {},
+    lostMsgs: {},
+    lostMessages: {},
+    foundMessages: {},
+    btnTop: "",
+    goods: {
+      'new': { page: 0, list: {} },
+      'pop': { page: 0, list: {} },
+      'sell': { page: 0 ,list: {} }
+	  }
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    // 1.请求轮播图数据
+    // this._getMultiData()
+
+    // 请求商品数据
+    this._getGoodsData(1)
+
+    this.setData({ lostMessages: lostMsg.lostMsg });  //如果是异步操作赋值那么必须用this.setData
+    this.setData({ foundMessages: foundMsg.foundMsg }); 
+    this.setData({ banners: banner.banner }); 
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+
+  // ---------------------------网络请求函数----------------------
+  _getMultiData() {
+    // 1.请求轮播图数据
+    getMultiData().then(res => {
+      console.log(res)
+      // 2. 取出数据
+      const banners = res.data.data.banner.list
+      console.log(banners)
+
+      // 4. 将获取的轮播图数据放在data对象中以供全局使用
+      this.setData({
+        banners: banners,
+        lostMsgs: lostMsgs
+      })
+    }).catch(err => {
+      console.log(err)
     })
-  }
+  },
+
+  _getGoodsData(pageNo) {
+    const pageSize = 4
+
+    // 1. 发送网络请求
+    getGoodsData(pageNo, pageSize).then(res => {
+      console.log(res)
+      // 2. 取出数据
+      const lostMessages = res.data.list
+      console.log(lostMessages)
+
+      // 4. 将获取的轮播图数据放在data对象中以供全局使用
+      this.setData({
+        lostMessages: lostMessages
+      })
+    }).catch(err => {
+      console.log(err)
+    })
+
+  },
+
+  // ---------------------------事件监听函数----------------------
+  showHeight: function (e) {
+    const bTop = e.detail;
+    const btnTop = bTop - 50 + 'px'
+    this.setData({
+      btnTop: btnTop
+    })
+  },
 })

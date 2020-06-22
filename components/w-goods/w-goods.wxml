@@ -1,0 +1,9 @@
+<!--components/w-goods/w-goods.wxml-->
+<view class="titleNum">
+  <text class="foundTitle">拾物信息</text><text class="foundNum">当前有{{ foundNum }}人拾获物品</text>
+</view>
+<view class='goods'>
+  <block wx:for="{{goodslist}}" wx:key="index">
+    <w-goods-item class="goods-item" goodsitem="{{item}}"/>
+  </block>
+</view>

@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-swiper": "/components/w-swiper/w-swiper",
+    "w-lostMsg": "./childCpns/w-lostMsg/w-lostMsg/",
+    "w-foundMsg": "./childCpns/w-foundMsg/w-foundMsg/",
+    "w-btn": "./childCpns/w-btn/w-btn/",
+    "w-goods": "/components/w-goods/w-goods"
+  },
+  "navigationBarTitleText": "失物招领"
 }

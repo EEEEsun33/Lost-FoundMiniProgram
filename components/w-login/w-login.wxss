@@ -1,0 +1,43 @@
+/* components/w-login/w-login.wxss */
+/* .vxBtn {
+  width: 100%;
+  margin-top: 40%;
+  background-color: #04BE02;
+  color: white;
+}
+
+.phoneText {
+  text-align: center;
+  color: gray;
+} */
+
+.loginPage {
+  margin: 80rpx;
+}
+.outView {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.phoneView {
+  display: flex; 
+}
+.phoneInput {
+  flex: 3;
+}
+.codeText {
+  font-size: 12px;
+  color: #999999;
+}
+.hr{
+  border: 1px solid #cccccc;
+  opacity: 0.2;
+  width: 100%;
+  margin: 0 auto;
+ }
+
+.loginBtn {
+  /* width: 100%; */
+  margin-top:20px;
+  background-color: #ff5777;
+  color: white;
+}

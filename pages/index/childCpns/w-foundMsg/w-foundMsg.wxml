@@ -1,0 +1,13 @@
+<!--pages/index/childCpns/w-foundMsg/w-foundMsg.wxml-->
+<view class="titleNum">
+  <text class="foundTitle">拾物信息</text><text class="foundNum">当前有{{ foundNum }}人拾获物品</text>
+</view>
+<view class="foundMsg">
+  <block wx:for="{{foundMsgs}}" wx:key="index">
+    <view class="foundMsg-item" bind:tap="enterDetails">
+      <image src="{{item.image}}" />
+      <view class="foundMsgtitle">{{item.title}}</view>
+      <view class="foundMsgdate">{{item.date}}</view>
+    </view>
+  </block>
+</view>

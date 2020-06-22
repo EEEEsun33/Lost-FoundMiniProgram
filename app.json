@@ -1,10 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/windowp/windowp",
-    "pages/my",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/lost/lost",
+    "pages/login/login",
+    "pages/details/details",
+    "pages/index/childCpns/w-foundMsg/w-foundMsg",
+    "pages/found/found"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -13,6 +15,23 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/tabbar/home.png",
+        "selectedIconPath": "/assets/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/assets/tabbar/profile.png",
+        "selectedIconPath": "/assets/tabbar/profile_active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

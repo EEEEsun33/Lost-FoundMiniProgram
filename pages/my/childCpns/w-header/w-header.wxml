@@ -1,0 +1,16 @@
+<!--pages/profile/childCpns/w-header/w-header.wxml-->
+<view class='header'>
+  <view class='avatar'>
+    <image src="/assets/my/avatar.png"/>
+  </view>
+  <view class='login-info'>
+    <view class='login' bind:tap="jumpLogin">登录/注册</view>
+    <view class='phone'>
+      <image src="/assets/my/phone.png"/>
+      暂无绑定手机号
+    </view>
+  </view>
+  <view class='arrow'>
+    <image src="/assets/my/arrow-right.png"/>
+  </view>
+</view>

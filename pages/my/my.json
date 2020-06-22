@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-header": "./childCpns/w-header/w-header"
+  },
+  "navigationBarTitleText": "我的信息"
 }

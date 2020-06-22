@@ -1,0 +1,8 @@
+<!--pages/index/childCpns/w-btn/w-btn.wxml-->
+
+<view class="bView">
+  <view class="bBtn" style="top: {{bTopp}}">
+    <button bind:tap="publishLost">丢失物品</button>
+    <button bind:tap="publishFound">拾获物品</button>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "w-login": "/components/w-login/w-login"
+  },
+  "navigationBarTitleText": "登录"
+}

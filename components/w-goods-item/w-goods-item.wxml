@@ -1,0 +1,10 @@
+<!--components/w-goods-item/w-goods-item.wxml-->
+<view class='goods-item' bindtap='itemClick'>
+  <image class='image' src="{{goodsitem.image || goodsitem.img || goodsitem.show.img}}"  mode='widthFix'/>
+  <view class='desc-info'>
+    <view class='title'>{{goodsitem.title}}</view>
+    <view class='info'>
+      <text>{{goodsitem.date}}</text>
+    </view>
+  </view>
+</view>

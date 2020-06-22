@@ -1,0 +1,22 @@
+<!--components/w-login/w-login.wxml-->
+<!-- <button class="vxBtn">微信登录</button>
+<view class="phoneText">
+  <text>手机登录/注册</text>
+</view> -->
+
+<view class="loginPage">
+  <form bindsubmit='formSubmit' report-submit='true'>
+    <view class="outView">
+      <view class="phoneView">
+        <input class="phoneInput" maxlength="11" type="number" focus placeholder="请输入手机号" name='username' placeholder-style="color:#999999;" />
+        <text class="codeText">获取验证码</text>
+      </view>
+    </view>
+    <view class="hr"></view>
+    <view class="outView">
+      <input placeholder="请输入密码" password name='password' placeholder-style="color:#999999;" />
+    </view>
+    <view class="hr"></view>
+    <button class="loginBtn" form-type='submit'>登录</button>
+  </form>
+</view>
